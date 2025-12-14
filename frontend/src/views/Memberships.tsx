@@ -1,7 +1,6 @@
 import { IoCheckmark, IoCloseSharp } from "react-icons/io5";
 import { useAuth } from "../components/AuthToken";
 
-
 export default function Memberships() {
   const token = localStorage.getItem("token");
   const { user } = useAuth();

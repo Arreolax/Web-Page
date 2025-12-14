@@ -35,7 +35,7 @@ export default function Menu() {
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
             <a href="/dashboard">
-              <img src="/images-home/logo_w.png" className="h-[6vmin] w-[26vmin] px-[0.9vmin]" alt="logo" />
+              <img src="../../src/images/images-home/logo_w.png" className="h-[6vmin] w-[26vmin] px-[0.9vmin]" alt="logo" />
             </a>
           </div>
 
@@ -188,7 +188,7 @@ export default function Menu() {
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
             <a href="/dashboard">
-              <img src="/images-home/logo_2.png" className="h-[6vmin] w-[26vmin] px-[0.9vmin]" alt="logo" />
+              <img src="../../src/images/images-home/logo_2.png" className="h-[6vmin] w-[26vmin] px-[0.9vmin]" alt="logo" />
             </a>
           </div>
 
@@ -210,7 +210,7 @@ export default function Menu() {
             {/* Profile */}
             <div className="relative">
               <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setopUsOpen(!OpUsOpen)}>
-                <img src="/user.png" alt="User" className="h-8 w-8 rounded-full" />
+                <img src="../../src/images/user.png" alt="User" className="h-8 w-8 rounded-full" />
                 <div className="hidden sm:block">
                   <p className="text-sm font-medium">{user?.username}</p>
                   <p className="text-xs text-gray-500">{user?.role}</p>

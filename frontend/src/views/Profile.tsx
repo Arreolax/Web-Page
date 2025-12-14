@@ -18,7 +18,7 @@ export default function Profile() {
                     <div className="border-b p-6 flex items-center justify-between">
                         <div className="flex items-center gap-4">
                             <img
-                                src="/user.png"
+                                src="../../src/images/user.png"
                                 alt="Profile"
                                 className="w-16 h-16 rounded-full"
                             />

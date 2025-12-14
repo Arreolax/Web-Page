@@ -9,7 +9,7 @@ import Dash from "./views/Dashboard"
 import ProtectedRoute from "./components/ProtectedRoute";   //Protege rutas de nuevos tokens
 import { AuthProvider } from "./components/AuthToken";      // Marca las rutas que pueden tener los datos del usuario con token
 import Members from "./views/Memberships";
-import HeaderN from "./layouts/HeaderN";
+import Header from "./layouts/Header";
 
 import Inventories from "./views/Inventories";
 import Products from "./views/Products";
@@ -30,7 +30,7 @@ export default function Router() {
                 </Routes>
 
                 <Routes>
-                    <Route element={<Menu />}>
+                    <Route element={<Menu/>}>
                         <Route path="/dashboard" element={<Dash />} />
                         <Route path="/my-profile" element={<Profile />} />
                         <Route path="/inventories" element={<Inventories />} />
@@ -39,7 +39,7 @@ export default function Router() {
                     </Route>
 
                     {/* Header Inicial */}
-                    <Route element={<HeaderN />}>
+                    <Route element={<Header/>}>
                         <Route path="/" element={<Homepage />} />
                         <Route path="/memberships" element={<Members />} />
                     </Route>

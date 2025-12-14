@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import imagen from "../../public/FondoLogin.png"; // Ruta de la imagen local
+import imagen from "../../src/images/FondoLogin.png";
 
 export default function AuthLayout() {
   return (
@@ -10,14 +10,13 @@ export default function AuthLayout() {
           <div className="flex flex-col items-center">
             <a href="/">
             <div className="flex items-center">
-              <p className="font-bold text-4xl">Inventory</p>
-              <p className="text-blue-800 font-bold text-4xl">Pro</p>
+              <p className="font-bold text-4xl">Inventory&nbsp;</p>
+              <p className="text-blue-800 font-bold text-4xl">X</p>
             </div>
             </a>
             <Outlet />
           </div>
         </div>
-        {/* Sección derecha (imagen local) */}
         <div
           className="w-2/3 bg-cover bg-center"
           style={{ backgroundImage: `url(${imagen})` }}

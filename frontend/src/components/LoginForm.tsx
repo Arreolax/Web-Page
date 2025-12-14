@@ -1,9 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { loginUserRequest } from "../api/user";
 
-import { auth, facebookProvider, googleProvider, signInWithPopup } from "../firebase";
 import { Eye, EyeOff } from "lucide-react";
-
 
 function LoginForm() { 
     const CharactersNoUser = [" ", ".", ",", ";", ":", "'", "\"", "`", "~",
@@ -52,26 +50,6 @@ function LoginForm() {
             setUser(decodedUser); // Actualiza el contexto
 
             window.location.href = '/dashboard';
-        }
-    };
-
-    // Función para iniciar sesión con Google
-    const handleGoogleLogin = async () => {
-        try {
-            const result = await signInWithPopup(auth, googleProvider);
-            setUser(result.user);
-        } catch (error) {
-            console.error("Error al iniciar sesión con Google:", error);
-        }
-    };
-
-    // Función para iniciar sesión con Facebook
-    const handleFacebookLogin = async () => {
-        try {
-            const result = await signInWithPopup(auth, facebookProvider);
-            setUser(result.user);
-        } catch (error) {
-            console.error("Error al iniciar sesión con Facebook:", error);
         }
     };
 
@@ -133,29 +111,21 @@ function LoginForm() {
 
                 <div className="flex space-x-4">
                     <button disabled
-                        onClick={handleGoogleLogin} className="flex justify-center px-4 py-2 border rounded-lg shadow gap-2  w-46">
+                        className="flex justify-center px-4 py-2 border rounded-lg shadow gap-2  w-46">
                         <img className="w-5 h-5"
-                            src="../../public/images-log/google_icon.png"
+                            src="../../src/images/images-log/google_icon.png"
                             alt="Google Logo"
                         />
                         Disabled
-                        {/*
-                        <img className="w-5 h-5"
-                            src="../../public/images-log/google_icon.png"
-                            alt="Google Logo"
-                        />
-                        Login with Google
-                        */}
                     </button>
 
                     <button disabled
-                        onClick={handleFacebookLogin} className="flex items-center justify-center gap-2 border px-4 py-2 rounded-md w-46">
+                        className="flex items-center justify-center gap-2 border px-4 py-2 rounded-md w-46">
                         <img className="w-5 h-5"
-                            src="../../public/images-log/faceb_icon.png"
+                            src="../../src/images/images-log/faceb_icon.png"
                             alt="Facebook Logo"
                         />
                         Disabled
-                        {/* Login with Facebook */}
                     </button>
                 </div>
 

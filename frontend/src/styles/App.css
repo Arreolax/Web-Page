@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+details summary::before {
+  content: "➕";
+  margin-right: 0.5rem;
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+details[open] summary::before {
+  content: "➖";
+  color: #11214d; /* Azul igual al del tema */
+}
